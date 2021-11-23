@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class TedTalkCustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var videoView: UIImageView!
     @IBOutlet weak var mainSpeakerLabel: UILabel!

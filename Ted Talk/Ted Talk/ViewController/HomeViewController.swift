@@ -7,15 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var searchView: UISearchBar!
     
-    var pickerSelectedRow: String?
+    private var pickerSelectedRow = ""
     var tedTalk: [TedTalk] = []
-    var pickerRows: [String] = ["Event", "Main Speaker", "Title", "Name", "Description"]
+    private let pickerRows: [String] = ["Event", "Main Speaker", "Title", "Name", "Description", "Any"]
     var filteredTedTalk: [TedTalk] = []{
         didSet{
             self.tableView.reloadData()
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         }
     }
 }
-extension ViewController: UISearchBarDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+extension HomeViewController: UISearchBarDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -55,32 +55,28 @@ extension ViewController: UISearchBarDelegate, UIPickerViewDataSource, UIPickerV
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchBar.text?.isEmpty ?? true || searchBar.text == searchBar.placeholder {
-            tableView.isHidden = true
-        }
         
         filteredTedTalk = []
         tedTalk.forEach({(talk) in
-            if talk.isFiltered(pickerSelectedRow!, input: searchText){
+            if talk.isFiltered(pickerSelectedRow, input: searchText){
                 filteredTedTalk.append(talk)
             }
         })
-        tableView.isHidden = false
     }
 }
 
-
-extension ViewController: UITableViewDataSource, UITableViewDelegate{
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredTedTalk.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! TedTalkCustomTableViewCell
         
         cell.mainSpeakerLabel.text = "Main speaker: \(filteredTedTalk[indexPath.row].main_speaker)"
         cell.descriptionLabel.text = filteredTedTalk[indexPath.row].description
+        
         return cell
     }
     
@@ -90,7 +86,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DetailTedTalkViewController{
-            destination.tedTalk = tedTalk[(tableView.indexPathForSelectedRow?.row)!]
+            destination.setTedTalk(talk: tedTalk[(tableView.indexPathForSelectedRow?.row)!])
         }
     }
 }

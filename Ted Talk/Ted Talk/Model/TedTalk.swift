@@ -25,41 +25,24 @@ struct TedTalk: Decodable{
     var url: String
     var views: Int
     
-    func isFiltered(_ pickerSelectedRow: String, input: String) -> Bool{
+    func isFiltered(_ filterBy: String, input: String) -> Bool{
         
-        var result = false
-        
-        switch pickerSelectedRow {
-        
-        case "Event": do{
-            print(input)
-            if self.event.contains(input){
-                result = true
-            }
-        }
-        case "Main Speaker": do{
-            if self.main_speaker.contains(input){
-                result = true
-            }
-        }
-        case "Title": do{
-            if self.title.contains(input){
-                result = true
-            }
-        }
-        case "Name": do{
-            if self.name.contains(input){
-                result = true
-            }
-        }
-        case "Description": do{
-            if description.contains(input){
-                result = true
-            }
-        }
+        switch filterBy {
+        case "Event":
+            return self.event.contains(input)
+        case "Main Speaker":
+            return self.main_speaker.contains(input)
+        case "Title":
+            return self.title.contains(input)
+        case "Name":
+            return self.name.contains(input)
+        case "Description":
+            return self.description.contains(input)
+        case "Any":
+            return self.event.contains(input) || self.main_speaker.contains(input) ||   self.title.contains(input) || self.name.contains(input) || self.description.contains(input)
         default:
-            result = true
+            return true
         }
-        return result
     }
 }
+
