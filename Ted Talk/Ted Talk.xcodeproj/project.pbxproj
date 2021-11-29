@@ -12,10 +12,12 @@
 		B3F949C3266A727C00D626BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F949C1266A727C00D626BB /* Main.storyboard */; };
 		B3F949C5266A728000D626BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F949C4266A728000D626BB /* Assets.xcassets */; };
 		B3F949C8266A728000D626BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F949C6266A728000D626BB /* LaunchScreen.storyboard */; };
-		B3F949D3266A728000D626BB /* Ted_TalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F949D2266A728000D626BB /* Ted_TalkTests.swift */; };
 		B3F949DE266A728000D626BB /* Ted_TalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F949DD266A728000D626BB /* Ted_TalkUITests.swift */; };
 		B3F949ED266A729400D626BB /* tedTalks.json in Resources */ = {isa = PBXBuildFile; fileRef = B3F949EC266A729400D626BB /* tedTalks.json */; };
 		FD1D7DAE274857C40064F511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F949BB266A727C00D626BB /* AppDelegate.swift */; };
+		FD1D7DB2274DBE8E0064F511 /* TedTalkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1D7DB1274DBE8E0064F511 /* TedTalkTest.swift */; };
+		FD1D7DB4275518BF0064F511 /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1D7DB3275518BF0064F511 /* HomeViewControllerTest.swift */; };
+		FD1D7DB627554D370064F511 /* DetailedTedTalkViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1D7DB527554D370064F511 /* DetailedTedTalkViewControllerTest.swift */; };
 		FD2E52532742B6A500445D08 /* TedTalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E52522742B6A500445D08 /* TedTalk.swift */; };
 		FD2E52552742C09700445D08 /* TedTalkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E52542742C09700445D08 /* TedTalkManager.swift */; };
 		FD35CBF12742D9E800D98C02 /* TedTalkCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD35CBF02742D9E800D98C02 /* TedTalkCustomTableViewCell.swift */; };
@@ -49,12 +51,14 @@
 		B3F949C7266A728000D626BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3F949C9266A728000D626BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3F949CE266A728000D626BB /* Ted TalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ted TalkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3F949D2266A728000D626BB /* Ted_TalkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ted_TalkTests.swift; sourceTree = "<group>"; };
 		B3F949D4266A728000D626BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3F949D9266A728000D626BB /* Ted TalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ted TalkUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F949DD266A728000D626BB /* Ted_TalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ted_TalkUITests.swift; sourceTree = "<group>"; };
 		B3F949DF266A728000D626BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3F949EC266A729400D626BB /* tedTalks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tedTalks.json; sourceTree = "<group>"; };
+		FD1D7DB1274DBE8E0064F511 /* TedTalkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TedTalkTest.swift; sourceTree = "<group>"; };
+		FD1D7DB3275518BF0064F511 /* HomeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTest.swift; sourceTree = "<group>"; };
+		FD1D7DB527554D370064F511 /* DetailedTedTalkViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTedTalkViewControllerTest.swift; sourceTree = "<group>"; };
 		FD2E52522742B6A500445D08 /* TedTalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TedTalk.swift; sourceTree = "<group>"; };
 		FD2E52542742C09700445D08 /* TedTalkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TedTalkManager.swift; sourceTree = "<group>"; };
 		FD35CBF02742D9E800D98C02 /* TedTalkCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TedTalkCustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -125,8 +129,10 @@
 		B3F949D1266A728000D626BB /* Ted TalkTests */ = {
 			isa = PBXGroup;
 			children = (
-				B3F949D2266A728000D626BB /* Ted_TalkTests.swift */,
 				B3F949D4266A728000D626BB /* Info.plist */,
+				FD1D7DB1274DBE8E0064F511 /* TedTalkTest.swift */,
+				FD1D7DB3275518BF0064F511 /* HomeViewControllerTest.swift */,
+				FD1D7DB527554D370064F511 /* DetailedTedTalkViewControllerTest.swift */,
 			);
 			path = "Ted TalkTests";
 			sourceTree = "<group>";
@@ -320,7 +326,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3F949D3266A728000D626BB /* Ted_TalkTests.swift in Sources */,
+				FD1D7DB627554D370064F511 /* DetailedTedTalkViewControllerTest.swift in Sources */,
+				FD1D7DB4275518BF0064F511 /* HomeViewControllerTest.swift in Sources */,
+				FD1D7DB2274DBE8E0064F511 /* TedTalkTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

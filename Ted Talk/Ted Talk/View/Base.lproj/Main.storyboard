@@ -110,12 +110,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="77.678571428571431"/>
+            <point key="canvasLocation" x="968" y="78"/>
         </scene>
         <!--Detail Ted Talk View Controller-->
         <scene sceneID="2MR-ul-KFB">
             <objects>
-                <viewController id="5S2-X2-o77" customClass="DetailTedTalkViewController" customModule="Ted_Talk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="DetailedTedTalkStoryBoard" storyboardIdentifier="DetailedTedTalkStoryBoard" id="5S2-X2-o77" customClass="DetailTedTalkViewController" customModule="Ted_Talk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jGH-cI-lAt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
